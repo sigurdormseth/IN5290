@@ -9,10 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $subject = "Password Reset Request";
     $message = "Username: $username\nPassword: $password";
 
-    // Additional headers for the email (you can customize this as needed)
-    $headers = "From: webmaster@example.com\r\n";
-    $headers .= "Reply-To: webmaster@example.com\r\n";
-
     // Send the email
     if (mail($to, $subject, $message, $headers)) {
         // Email sent successfully
