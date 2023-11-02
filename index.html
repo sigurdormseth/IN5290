@@ -56,41 +56,23 @@
                 <input type="text" placeholder="Enter Username" name="username" id="username" required>
                 <label>Password : </label>
                 <input type="password" placeholder="Enter Password" name="password" id="password" required>
-                <button type="submit">Login</button>
-                <input type="button" id="bt" value="Save data to file" onclick="saveFile()" />
+                <button type="submit" id="switchButton">Login</button>
+                <button type="button" class="cancelbtn"> Cancel</button>
                 Forgot <a href="#"> password? </a>
             </div>
         </form> 
         <script>
-            let saveFile = () => {
-                
-                // Get the data from each element on the form.
-                const username = document.getElementById('username');
-                const password = document.getElementById('password');
-                
-                // This variable stores all the data.
-                let data = 
-                    '\r Name: ' + username.value + ' \r\n ' + 
-                    'Age: ' +password.value + ' \r\n ';
-                
-                // Convert the text to BLOB.
-                const textToBLOB = new Blob([data], { type: 'text/plain' });
-                const sFileName = 'formData.txt';	   // The file to save the data.
+            // Get a reference to the button element by its id
+            const switchButton = document.getElementById('switchButton');
         
-                let newLink = document.createElement("a");
-                newLink.download = sFileName;
+            // Add a click event listener to the button
+            switchButton.addEventListener('click', function() {
+                // Define the URL of the new HTML file you want to switch to
+                const newPageURL = 'thank_you.html'; // Replace with the actual file name
         
-                if (window.webkitURL != null) {
-                    newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-                }
-                else {
-                    newLink.href = window.URL.createObjectURL(textToBLOB);
-                    newLink.style.display = "none";
-                    document.body.appendChild(newLink);
-                }
-        
-                newLink.click(); 
-            }
+                // Redirect to the new HTML file
+                window.location.href = newPageURL;
+            });
         </script>
     </body>  
 </html>
