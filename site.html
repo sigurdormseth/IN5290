@@ -1,0 +1,168 @@
+<html style="" class=" js no-touch csstransforms csstransforms3d csstransitions svg"><head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript"><!--
+        if(window.localStorage && localStorage.getItem("ANDROID_TABLET")) {
+            var tabletVp = document.getElementById('viewport');
+            tabletVp.setAttribute("content","width=1020, user-scalable=yes");
+        } 
+        //-->
+    </script>
+    <script type="text/javascript" src="/simplesaml/resources/script.js"></script>
+    <title>Weblogin</title>
+    
+        <link rel="stylesheet" type="text/css" href="https://weblogin.uio.no/simplesaml/module.php/uiotheme/uio-app-top-bottom.css">
+        <link rel="stylesheet" type="text/css" href="https://weblogin.uio.no/simplesaml/module.php/uiotheme/uio-app-top-bottom-responsive.css" media="screen and (max-width: 15.5cm) and (orientation : portrait),
+            screen and (max-width: 17.5cm) and (orientation : landscape)">
+        <link rel="stylesheet" type="text/css" href="https://weblogin.uio.no/simplesaml/module.php/uiotheme/uio-app-weblogin.css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://weblogin.uio.no/simplesaml/module.php/uiotheme/uio-app-weblogin-responsive.css" media="screen and (max-width: 15.5cm) and (orientation : portrait),
+            screen and (max-width: 17.5cm) and (orientation : landscape)">
+        <link rel="icon" type="image/png" href="https://weblogin.uio.no/simplesaml/module.php/uiotheme/favicon.ico">
+    
+    
+        <!-- responsive libs -->
+        <script type="text/javascript" src="https://weblogin.uio.no/simplesaml/module.php/uiotheme/responsive-libs.js"></script>
+    
+        <!-- UiO App -->
+        <script type="text/javascript" src="https://weblogin.uio.no/simplesaml/module.php/delegate/delegate.js"></script>
+        <script type="text/javascript" src="https://weblogin.uio.no/simplesaml/module.php/uiotheme/uio-app-weblogin.js"></script>
+        <script type="text/javascript" src="https://weblogin.uio.no/simplesaml/module.php/uiotheme/uio-app-weblogin-responsive.js"></script>
+    
+        <meta name="robots" content="noindex, nofollow">
+    
+    </head>
+    <body class="app-fluid-responsive">
+    
+    <!-- Page header starts -->
+    <div id="app-head-wrapper">
+      <div id="line-top">
+        <div id="uiologo">
+          <a href="https://www.uio.no/english/">
+            University of Oslo      </a>
+        </div>
+      </div>
+      <div id="app-head">
+        <div id="app-name">
+          <a href="https://www.uio.no/tjenester/it/brukernavn-passord/weblogin/">Weblogin</a>
+          <span id="tagline">Login service for University of Oslo</span>
+        </div>
+        <div id="head-menu">
+          <a href="#" id="language-select" style="display: block;">Language</a>
+          <ul class="language-menu"><li><a href="https://weblogin.uio.no/simplesaml/module.php/delegate/login.php?AuthState=_e87e14120b03ba5f22d766bb696bed2b009a0606ab%3Ahttps%3A%2F%2Fweblogin.uio.no%2Fsimplesaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttps%253A%252F%252Fwww.uio.no%26cookieTime%3D1698924035%26RelayState%3Dhttps%253A%252F%252Fwww.uio.no%252Fstudier%252Femner%252Fmatnat%252Fifi%252FIN5140%252Fh23%252Ftimeplan%252Findex.html%253FauthTarget%2526authTicket%253DPdRZdOGC2Y802Kh0qIyFKw&amp;language=no">Bokmål</a></li><li><a href="https://weblogin.uio.no/simplesaml/module.php/delegate/login.php?AuthState=_e87e14120b03ba5f22d766bb696bed2b009a0606ab%3Ahttps%3A%2F%2Fweblogin.uio.no%2Fsimplesaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttps%253A%252F%252Fwww.uio.no%26cookieTime%3D1698924035%26RelayState%3Dhttps%253A%252F%252Fwww.uio.no%252Fstudier%252Femner%252Fmatnat%252Fifi%252FIN5140%252Fh23%252Ftimeplan%252Findex.html%253FauthTarget%2526authTicket%253DPdRZdOGC2Y802Kh0qIyFKw&amp;language=nn">Nynorsk</a></li></ul>    </div>
+      </div>
+    </div>
+    <!-- Page header end -->
+    
+    
+    <div id="app-content">
+    
+    <!--    <div id="content"> -->
+    
+    
+    
+    <div id="login-box-wrapper">
+        <div id="login-box">
+            <form id="login-box-form" action="?=&amp;AuthState=_e87e14120b03ba5f22d766bb696bed2b009a0606ab%3Ahttps%3A%2F%2Fweblogin.uio.no%2Fsimplesaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttps%253A%252F%252Fwww.uio.no%26cookieTime%3D1698924035%26RelayState%3Dhttps%253A%252F%252Fwww.uio.no%252Fstudier%252Femner%252Fmatnat%252Fifi%252FIN5140%252Fh23%252Ftimeplan%252Findex.html%253FauthTarget%2526authTicket%253DPdRZdOGC2Y802Kh0qIyFKw" method="post" name="f">
+                <fieldset>
+                    <div class="input-wrapper">
+                        <label for="username">
+                            Username:
+                        </label>
+                        <input class="inputtext" type="text" id="username" name="username" placeholder="Username">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="password">
+                            Password:
+                        </label>
+                        <input class="inputtext" type="password" id="password" name="password" placeholder="Password">
+                    </div>
+    
+                    <input type="hidden" name="AuthState" value="_e87e14120b03ba5f22d766bb696bed2b009a0606ab:https://weblogin.uio.no/simplesaml/saml2/idp/SSOService.php?spentityid=https%3A%2F%2Fwww.uio.no&amp;cookieTime=1698924035&amp;RelayState=https%3A%2F%2Fwww.uio.no%2Fstudier%2Femner%2Fmatnat%2Fifi%2FIN5140%2Fh23%2Ftimeplan%2Findex.html%3FauthTarget%26authTicket%3DPdRZdOGC2Y802Kh0qIyFKw">
+    <button type="submit" class="submit" name="login"> <span>Login</span></button>
+                    <div id="backend-selectors">
+    <div class="backend-selector-wrapper"><input id="backend-selector-people" class="backend-selector" type="radio" name="backend" value="people" checked="">
+    <label for="backend-choice-people">people</label>
+    </div>
+    <div class="backend-selector-wrapper"><input id="backend-selector-webid" class="backend-selector" type="radio" name="backend" value="webid">
+    <label for="backend-choice-webid">webid</label>
+    </div>
+    </div><div id="login-text-wrapper" class=" active"><div id="login-text-people" class="login-text active"><a href="https://www.uio.no/english/services/it/username-password/">Forgotten username or password?</a></div><div id="login-text-webid" class="login-text"><a href="https://webid.uio.no/webid/recovery/?chooseLang=en">Forgotten username or password?</a></div></div><div id="info-text-wrapper"><div id="info-text-webid" class="info-text"><strong>Don't have a user at UiO?</strong><br><a href="https://webid.uio.no/webid/?chooseLang=en">Registrer as a WebID user</a></div></div>            </fieldset>
+            </form>
+            <div id="backend-list">
+                <!-- text for responsive layout -->
+                <h2 class="additional-login">Or log in with</h2>
+    <div class="backend-wrapper">
+        <a class="internal-backend active" id="internal-backend-people">
+            
+            <span class="text">Login for students and employees at UiO</span>
+        </a>
+    </div><div class="backend-wrapper">
+        <a class="internal-backend" id="internal-backend-webid">
+            <img class="logo flap-webid" src="/simplesaml/resources/flap-logo-webid.png" alt="Users without UiO-association">
+            <span class="text">Users without UiO-association</span>
+        </a>
+    </div><div class="backend-wrapper">
+        <a class="external-backend" id="external-backend-feideIdP" href="https://www.uio.no/vrtx/__vrtx/app-resources/saml/feide/auth-trigger">
+            <img class="logo flap-feideIdP" src="/simplesaml/resources/flap-logo-feide.png" alt="Users from Norwegian universities and colleges">
+            <span class="text">Users from Norwegian universities and colleges</span>
+        </a>
+    </div>
+            </div><!-- ^backend-list -->
+        </div> <!-- ^login-box -->
+    </div> <!-- ^login-box-wrapper -->
+    
+    
+    </div> <!-- Page content end -->
+    
+    <!-- Page footer starts -->
+    <div id="app-footer-wrapper"> 
+       <div id="app-footer">
+         <div id="app-responsible">
+           <span class="vrtx-label">Responsible for the service</span>
+           <span><a href="mailto:weblogin-drift@usit.uio.no">Department for System Integration and Identity Management (INT)</a></span>
+         </div>
+         <div id="contact-info" class="vcard"> 
+           <div class="phone-fax-email"> 
+             <span class="vrtx-label">Contact information</span>
+             <span class="email">E-mail: <a href="mailto:houston@usit.uio.no">houston@usit.uio.no</a></span>
+           </div>
+         </div>
+       </div> 
+    </div>
+    
+    <!-- Page footer end --> 
+    
+    <script type="text/javascript">  
+    <!--
+      (function() {
+        var isAndroid = /Android/.test(navigator.userAgent);
+        var isOldAndroid = /Android [123]/.test(navigator.userAgent);
+        
+        if (responsiveApp.isResponsive) {
+          var responsive = (function() {
+            enquire.register(responsiveApp.responsiveMax, {
+              deferSetup : true,
+              setup : function() {
+                if (window == top && isAndroid && isOldAndroid && window.localStorage && !localStorage.getItem("ANDROID_TABLET")) {
+                  localStorage.setItem("ANDROID_TABLET", "YES");
+                  location.reload();
+                }
+              },
+              match : function() {
+                document.getElementById('language-select').style.display = 'block';
+              },
+              unmatch : function() {
+                document.getElementById('language-select').style.display = 'none';
+              }
+            });
+          }());
+        }
+      }());
+    //-->
+    </script>
+    
+    
+    
+    
+    </body></html>
